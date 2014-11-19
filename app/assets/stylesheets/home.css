@@ -1,0 +1,30 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+.navigator {
+    margin-top:20px;
+    font-family: 'Franklin Gothic Medium', cursive;
+    min-height: 20px;
+    width: 95%;
+    font-size: 25px;
+    text-align: right;
+
+}
+
+.container ul {
+    text-align: center;
+    display: inline-block;
+    margin-top:20px;
+    height: 20px;
+    width: 50%;
+    float:right;
+
+}
+
+li {
+    height: 20px;
+    width: 10%;
+    display:inline-block;
+    text-align: center;
+}

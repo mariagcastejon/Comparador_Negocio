@@ -1,0 +1,8 @@
+<%= form_tag [@country] do |f| %>
+ 	<%= f.label :precio_medio %>
+ 	<%= f.text_field :precio_medio %>
+ 	<br/>
+ 	
+ 	<%= f.submit "Save" %>
+ 	<%= link_to "Cancel", location_visits_path(@location) %>
+<% end %>
