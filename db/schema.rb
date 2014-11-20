@@ -11,12 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141117191313) do
+ActiveRecord::Schema.define(version: 20141119123649) do
 
   create_table "countries", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "impuesto_apertura"
+    t.integer  "impuesto_sociedades"
+    t.string   "idh"
+    t.integer  "precio_medio_plato"
   end
 
   create_table "users", force: true do |t|

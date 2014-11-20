@@ -9,9 +9,24 @@
 
 
 Country.create([
-	{name: 'Panama'
-		impuesto},
-	{name: 'Brasil'}])
+	{name: 'Panama', 
+		idh: 'Alto', 
+		impuesto_apertura: '10%', 
+		impuesto_sociedades: '7%', 
+		precio_madio_plato: 'Alto'},
+
+	{name: 'España', 
+		idh: 'Muy Alto', 
+		impuesto_apertura: '15%', 
+		impuesto_sociedades: '11%', 
+		precio_madio_plato: 'Muy Alto'}])
+
+	{name: 'EEUU',
+		idh: 'Muy Alto', 
+		impuesto_apertura: '12%', 
+		impuesto_sociedades: '35%', 
+		precio_madio_plato: 'Muy Alto'}])
+
 
 
 

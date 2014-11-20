@@ -1,8 +1,24 @@
-<%= form_tag [@country] do |f| %>
- 	<%= f.label :precio_medio %>
- 	<%= f.text_field :precio_medio %>
- 	<br/>
+<h1>Compara tu restaurante!</h1>
+
+<%= form_tag restaurants_path, :method => 'get' do %>
+	
+	<input type="radio" name="myradio" value="nueva_apertura">
+	<%=label_tag(:nueva_apertura) %>
+ 	</br>
+	
+	<input type="radio" name="myradio" value="traspaso">
+	<%=label_tag(:traspaso) %>
+ 	</br>	
+	
+	<%=label_tag(:precio_medio_del_plato) %></br>
  	
- 	<%= f.submit "Save" %>
- 	<%= link_to "Cancel", location_visits_path(@location) %>
+ 		<input type="radio" name="myradio2" value="bajo">
+ 			<%=label_tag(:bajo) %>
+ 		<input type="radio" name="myradio2" value="medio">
+ 			<%=label_tag(:medio) %>
+ 		<input type="radio" name="myradio2" value="alto">
+ 			<%=label_tag(:alto) %>
+  	
+ 	<%=submit_tag "Comparar paises",:name => "nill" %>
+ 	
 <% end %>
