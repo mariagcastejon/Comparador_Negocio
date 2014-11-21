@@ -6,9 +6,13 @@ Rails.application.routes.draw do
 
   get 'home', to: 'home#index'
 
-  get '/login', to: 'users#show'
+  get '/users/:id', to: 'users#show'
 
-  get '/restaurants', to:'pages#new'
+  root 'home#index'
+
+  get '/restaurant', to:'pages#index'
+
+  
 
 end
   # The priority is based upon order of creation: first created -> highest priority.

@@ -10,22 +10,22 @@
 
 Country.create([
 	{name: 'Panama', 
-		idh: 'Alto', 
-		impuesto_apertura: '10%', 
-		impuesto_sociedades: '7%', 
-		precio_madio_plato: 'Alto'},
+		idh: '7', 
+		impuesto_apertura: '10', 
+		impuesto_sociedades: '7', 
+		precio_medio_plato: '8'},
 
 	{name: 'España', 
-		idh: 'Muy Alto', 
-		impuesto_apertura: '15%', 
-		impuesto_sociedades: '11%', 
-		precio_madio_plato: 'Muy Alto'}])
+		idh: '10', 
+		impuesto_apertura: '15', 
+		impuesto_sociedades: '11', 
+		precio_medio_plato: '9'},
 
 	{name: 'EEUU',
-		idh: 'Muy Alto', 
-		impuesto_apertura: '12%', 
-		impuesto_sociedades: '35%', 
-		precio_madio_plato: 'Muy Alto'}])
+		idh: '9', 
+		impuesto_apertura: '12', 
+		impuesto_sociedades: '35', 
+		precio_medio_plato: '9'}])
 
 
 

@@ -1,6 +1,18 @@
-<% if user_signed_in? %>
-<p><%= current_user.name %>Welcome</p>
-<%= link_to 'Logout', destroy_user_session_path, method: 'Delete' %>
-<% else %>
-<h1>Nobody logued in</h1>
-<% end %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Comparador</title>
+</head>
+<body>
+	<header>
+		<% if user_signed_in? %>
+			<p><%= current_user.name %>Welcome</p>
+			<%= link_to 'Logout', destroy_user_session_path, method: 'Delete' %>
+		<% else %>
+			<h1>Nobody logued in</h1>
+		<% end %>
+	</header>
+	
+</body>
+</html>

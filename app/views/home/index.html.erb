@@ -8,11 +8,17 @@
 	<header>
 	<nav class = "navigator">
         <ul class= "container">
-            <li>Log in</li>
-            <li>Regístrate</li>     
+        	<% if user_signed_in? %>
+				<li><%= link_to 'Salir', destroy_user_session_path, method: :delete    %></li>
+				<li><%= link_to 'Compara tu negocio', restaurant_path %></li>
+			<% else %>
+				<li><%= link_to 'Identifícate', new_user_session_path %></li>
+ 				<li><%= link_to 'Regístrate', new_user_registration_path %></li>
+            <% end %>               
         </ul>
     </nav>
 	</header>
 	
 </body>
 </html>
+

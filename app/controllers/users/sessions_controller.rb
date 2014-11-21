@@ -1,10 +1,6 @@
 class Users::SessionsController < Devise::SessionsController
 
-  def create
-    super do |resource|
-      puts "Ey! Do some comparation with #{resource.name}"
-    end
-  end
+
 # before_filter :configure_sign_in_params, only: [:create]
 
   # GET /resource/sign_in
