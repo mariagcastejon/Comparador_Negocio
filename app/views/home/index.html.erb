@@ -9,16 +9,28 @@
 	<nav class = "navigator">
         <ul class= "container">
         	<% if user_signed_in? %>
-				<li><%= link_to 'Salir', destroy_user_session_path, method: :delete    %></li>
+				<li><%= link_to 'Salir', destroy_user_session_path, method: :delete  %></li>
 				<li><%= link_to 'Compara tu negocio', restaurant_path %></li>
 			<% else %>
-				<li><%= link_to 'Identifícate', new_user_session_path %></li>
- 				<li><%= link_to 'Regístrate', new_user_registration_path %></li>
+				<a href=""><li><%= link_to 'Identifícate', new_user_session_path %></li></a>
+ 				<a href=""><li><%= link_to 'Regístrate', new_user_registration_path %></li></a>
             <% end %>               
         </ul>
     </nav>
 	</header>
-	
+
+	<div class = "portada">		
+	</div>
+
+	<section>
+		<div class= "slide">  
+        		<%= image_tag "eeuu.jpg", class: "img1" %>
+        		<%= image_tag "spain.jpg", class: "img2" %>
+        		<%= image_tag "panama.jpg", class: "img3" %>
+        </div> 
+
+	</section>
+
 </body>
 </html>
 

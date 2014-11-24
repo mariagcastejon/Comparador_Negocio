@@ -9,7 +9,7 @@
     width: 95%;
     font-size: 25px;
     text-align: right;
-
+    margin-bottom: 2%;
 }
 
 .container ul {
@@ -22,9 +22,38 @@
 
 }
 
+a:link {   text-decoration:none; color:#000000 ;}
+a:visited {   color:#000000 ; text-decoration:none;}
+a:active {   color:#000000; text-decoration:none;}
+
 li {
     height: 20px;
     width: 10%;
     display:inline-block;
     text-align: center;
+    text-decoration: none;
+}
+
+.portada {
+    background-image: url("portada.jpg");
+    background-repeat: no-repeat;
+    width: 90%;
+    height: 700px;
+    margin-left: 4%;
+}
+
+.slide{
+   margin-left: 3%;
+   width: 45%;
+   height: 250px;
+   display:inline-block;
+   position: relative;
+ }
+.slide img{
+   width: 45%;
+   height: 250px;
+   position: absolute;
+}
+.slide .img2, .slide .img3 {
+   display: none;
 }

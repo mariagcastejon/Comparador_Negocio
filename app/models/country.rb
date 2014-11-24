@@ -2,19 +2,19 @@ class Country < ActiveRecord::Base
 
 	def self.find_price(price, ponderations)
 		if price == "alto"
-			max = 20
-			min = 14
+			max = 100
+			min = 70
 		end
 		if price == "medio"
-			max = 14
-			min = 7
+			max = 69
+			min = 40
 		end
 		if price == "bajo"
-			max = 7
-			min = 0.0
+			max = 39
+			min = 1
 		end
 		ponderations.select do |country|
-			min <= country[:pond] && country[:pond] <= max
+			true#min <= country[:pond] && country[:pond] <= max
 		end
 	end	
 	def self.ponderations
