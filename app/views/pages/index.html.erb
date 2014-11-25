@@ -2,30 +2,23 @@
 
 <%= form_tag restaurant_path, :method => 'get' do %>
 	
-	<input type="radio" name="modo" value="nueva_apertura">
-	<%=label_tag(:nueva_apertura) %>
+	<input type="radio" name="nueva_apertura" <% if params[:nueva_apertura] == true %> checked <% end %> value="true">
+	<%= label_tag(:nueva_apertura) %>
  	</br>
 	
-	<input type="radio" name="modo" value="traspaso">
-	<%=label_tag(:traspaso) %>
+	<input type="radio" name="nueva_apertura" <% if params[:nueva_apertura] == false %> checked <% end %> value="false">
+	<%= label_tag(:traspaso) %>
  	</br>	
 	
-	<%=label_tag(:precio_medio_del_plato) %></br>
- 	
- 		<input type="radio" name="precio" value="bajo">
- 			<%=label_tag(:bajo) %>
- 		<input type="radio" name="precio" value="medio">
- 			<%=label_tag(:medio) %>
- 		<input type="radio" name="precio" value="alto">
- 			<%=label_tag(:alto) %>
- 		</br>
-
- 	<%=submit_tag "Comparar",:name => "nill" %>
+	<%= label_tag(:precio_medio_del_plato) %></br>
+		<input name="coste_plato" value="<%= "#{params[:coste_plato]}" %>">
+		</br>	
+ 	<%= submit_tag "Comparar" %>
  	
 <% end %>
 
 <% if @countries %>
 	<% @countries.each do |country| %>
-		<%= country[:name] %> - <%= country[:pond] %><br />
+		<%= country[:name] %> - <%= country[:score] %><br />
 	<% end %>
 <% end %>

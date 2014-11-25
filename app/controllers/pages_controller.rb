@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 	def index
-		ponds = Country.ponderations
-		@countries = Country.find_price params[:precio], ponds
+		params[:nueva_apertura] = params[:nueva_apertura] == true.to_s
+		@countries = Country.scored_countries(params[:coste_plato], params[:nueva_apertura])
 	end
 end

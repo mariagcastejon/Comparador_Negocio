@@ -1,31 +1,40 @@
 class Country < ActiveRecord::Base
 
-	def self.find_price(price, ponderations)
-		if price == "alto"
-			max = 100
-			min = 70
+	def self.scored_countries(coste_plato, nueva_apertura)
+		all.map do |country|
+			{
+				name: country.name,
+				score: country.calculate_score(coste_plato, nueva_apertura)
+			}
 		end
-		if price == "medio"
-			max = 69
-			min = 40
-		end
-		if price == "bajo"
-			max = 39
-			min = 1
-		end
-		ponderations.select do |country|
-			true#min <= country[:pond] && country[:pond] <= max
-		end
-	end	
-	def self.ponderations
+	end
 
-		ponds = all.map do |country|
-			x = 0;
-			x += country.impuesto_apertura.to_i * 0.1
-			x += country.impuesto_sociedades.to_i * 0.3
-			x += country.precio_medio_plato.to_i * 0.3
-			x += country.idh.to_i * 0.3
-			{name: country.name, pond: x}
-		end
+	def calculate_from_price(coste_plato)
+		(self.precio_medio_plato - coste_plato.to_i).abs
+	end
+
+	
+	def calculate_score(coste_plato, nueva_apertura)
+		distancia_precio = calculate_from_price(coste_plato)
+		coste_apertura = nueva_apertura ? self.impuesto_apertura : 0
+		coste_anual = self.impuesto_sociedades * 12
+
+		#distancia_precio_per = 100 - [100, distancia_precio].min
+		#coste_anual_per = 100 - (coste_anual * 100 / 420)
+		#coste_apertura_per = 100 - (coste_apertura * 100 / 15)
+
+		distancia_precio_per(distancia_precio) * 0.6 + coste_apertura_per(coste_apertura) * 0.2 + coste_anual_per(coste_anual) * 0.2
+	end
+
+	def distancia_precio_per(distancia_precio)
+		(100 - [100, distancia_precio].min)
+	end
+
+	def coste_anual_per(coste_anual)
+		(100 - (coste_anual * 100 / 420))
+	end
+
+	def coste_apertura_per(coste_apertura)
+		(100 - (coste_apertura * 100 / 15))
 	end
 end
