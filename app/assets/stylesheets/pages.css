@@ -2,3 +2,26 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+.fondo_foto {
+	background-image: url("fondo_formulario.jpg") ;
+	height: 950px;
+	width: 100%;
+	color: #ffffff;
+}
+
+.titulo {
+	font-family: 'Franklin Gothic Medium', cursive;
+	font-size: 40px;
+}
+
+.comparador{
+	float: right;
+	margin-top: 5%;
+	margin-right: 5%;
+}
+
+.apertura {
+	font-family: 'Franklin Gothic Medium', cursive;
+	font-size: 25px;
+
+}

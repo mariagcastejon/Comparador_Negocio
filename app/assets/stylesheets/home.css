@@ -58,17 +58,22 @@ li {
 
 .slide{
    margin-left: 10%;
-   margin-top: 5%;
-   width: 45%;
+   width: 40%;
    height: 250px;
    display:inline-block;
    position: relative;
  }
 .slide img{
-   width: 45%;
+   width: 70%;
    height: 250px;
    position: absolute;
 }
 .slide .img2, .slide .img3 {
    display: none;
+}
+
+.explicacion {
+  width: 43%;
+  display: inline-block;
+  font-size: 50px;
 }

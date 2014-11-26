@@ -1,24 +1,34 @@
-<h1>Compara tu restaurante!</h1>
+<section class="fondo_foto">
+<div class="comparador">
 
-<%= form_tag restaurant_path, :method => 'get' do %>
+	<h1 class="titulo">Compara tu restaurante:</h1>
+
+<%= form_tag restaurant_path, :method => 'get' , :class => "apertura" do %>
 	
 	<input type="radio" name="nueva_apertura" <% if params[:nueva_apertura] == true %> checked <% end %> value="true">
-	<%= label_tag(:nueva_apertura) %>
+	<%= label_tag(:nueva_apertura)  %>
  	</br>
 	
 	<input type="radio" name="nueva_apertura" <% if params[:nueva_apertura] == false %> checked <% end %> value="false">
 	<%= label_tag(:traspaso) %>
+
  	</br>	
 	
-	<%= label_tag(:precio_medio_del_plato) %></br>
+	<%= label_tag(:precio_medio_del_plato) %>
+	</br>
 		<input name="coste_plato" value="<%= "#{params[:coste_plato]}" %>">
 		</br>	
  	<%= submit_tag "Comparar" %>
  	
 <% end %>
 
-<% if @countries %>
-	<% @countries.each do |country| %>
-		<%= country[:name] %> - <%= country[:score] %><br />
+<div class="apertura">
+	<% if @countries %>
+		<% @countries.each do |country| %>
+			<%= country[:name] %> - <%= country[:score] %><br />
+		<% end %>
 	<% end %>
-<% end %>
+</div>
+
+</div>
+</section>
