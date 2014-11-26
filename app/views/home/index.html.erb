@@ -5,8 +5,9 @@
 	<title>Comparador</title>
 </head>
 <body>
-	<header>
-	<nav class = "navigator">
+	<header class = "navigator">
+	<nav>
+		<p class = "logo">Comparador de negocio</p>
         <ul class= "container">
         	<% if user_signed_in? %>
 				<li><%= link_to 'Salir', destroy_user_session_path, method: :delete  %></li>
@@ -27,7 +28,8 @@
         		<%= image_tag "eeuu.jpg", class: "img1" %>
         		<%= image_tag "spain.jpg", class: "img2" %>
         		<%= image_tag "panama.jpg", class: "img3" %>
-        </div> 
+        </div>
+		<p>Holaaaaaa</p> 
 
 	</section>
 

@@ -3,47 +3,62 @@
   They will automatically be included in application.css.
 */
 .navigator {
-    margin-top:20px;
+    width: 99.2%;
+    height: 70px;
+    background-color: black;
     font-family: 'Franklin Gothic Medium', cursive;
-    min-height: 20px;
-    width: 95%;
     font-size: 25px;
     text-align: right;
-    margin-bottom: 2%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
 }
 
-.container ul {
-    text-align: center;
-    display: inline-block;
-    margin-top:20px;
-    height: 20px;
-    width: 50%;
-    float:right;
+.logo {
+  font-family: 'Franklin Gothic Medium', cursive;
+  color: #ffffff;
+  font-size: 40px;
+  width: 25%;
+  float: left;
+  display: inline;
+  position: relative;
+  top: -35px;
+  
 
 }
 
-a:link {   text-decoration:none; color:#000000 ;}
-a:visited {   color:#000000 ; text-decoration:none;}
-a:active {   color:#000000; text-decoration:none;}
+.container {
+    min-height: 20px;
+    min-width: 10px;
+    float: right;
+
+    /*height: 20px;*/
+    /*width: 50%;*/
+    /*float:right;*/
+
+}
+
+a:link {   text-decoration:none; color:#ffffff ;}
+a:visited {   color:#ffffff ; text-decoration:none;}
+a:active {   color:#ffffff; text-decoration:none;}
 
 li {
-    height: 20px;
-    width: 10%;
-    display:inline-block;
-    text-align: center;
-    text-decoration: none;
+    /*height: 20px;*/
+    display: inline;
+    padding-right: 30px;
 }
 
 .portada {
     background-image: url("portada.jpg");
     background-repeat: no-repeat;
-    width: 90%;
-    height: 700px;
-    margin-left: 4%;
+    background-position: 0px 45px;
+    width: 100%;
+    height: 800px;
 }
 
 .slide{
-   margin-left: 3%;
+   margin-left: 10%;
+   margin-top: 5%;
    width: 45%;
    height: 250px;
    display:inline-block;
